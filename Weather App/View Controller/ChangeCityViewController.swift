@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ChangeCityViewController.swift
 //  Weather App
 //
 //  Created by Iyin Raphael on 11/19/18.
@@ -8,13 +8,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ChangeCityViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
 
+        // Do any additional setup after loading the view.
+    }
+    
 
 }
-
