@@ -54,6 +54,9 @@
 		EB2CC11F21A35B7400174FE8 /* Weather App */ = {
 			isa = PBXGroup;
 			children = (
+				EB2CC13421A35FBF00174FE8 /* View Controller */,
+				EB2CC13321A35FB200174FE8 /* Model Controller */,
+				EB2CC13221A35FA700174FE8 /* Model */,
 				EB2CC12021A35B7400174FE8 /* AppDelegate.swift */,
 				EB2CC12221A35B7400174FE8 /* ViewController.swift */,
 				EB2CC12421A35B7400174FE8 /* Main.storyboard */,
@@ -62,6 +65,27 @@
 				EB2CC12C21A35B7900174FE8 /* Info.plist */,
 			);
 			path = "Weather App";
+			sourceTree = "<group>";
+		};
+		EB2CC13221A35FA700174FE8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EB2CC13321A35FB200174FE8 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+		EB2CC13421A35FBF00174FE8 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
