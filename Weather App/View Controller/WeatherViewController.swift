@@ -10,21 +10,10 @@ import UIKit
 
 class WeatherViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-
-    }
+    let weather_URL = "http://api.openweathermap.org/data/2.5/weather"
+    let app_ID = "e72ca729af228beabd5d20e3b7749713"
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    @IBOutlet weak var temperatureLabel: UILabel!
+    @IBOutlet weak var weatherIcon: UIImageView!
+    @IBOutlet weak var cityLabel: UILabel!
 }

@@ -16,10 +16,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Weather View Controller-->
         <scene sceneID="qPa-Pv-Vk6">
             <objects>
-                <viewController id="YU3-sB-bhp" sceneMemberID="viewController">
+                <viewController id="YU3-sB-bhp" customClass="WeatherViewController" customModule="Weather_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xGj-gD-YJT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -85,15 +85,20 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Rsj-Cy-eSd"/>
                     </view>
+                    <connections>
+                        <outlet property="cityLabel" destination="mx4-Ap-CUd" id="Xoy-A7-in2"/>
+                        <outlet property="temperatureLabel" destination="afk-EY-UTR" id="Zpi-dp-KZb"/>
+                        <outlet property="weatherIcon" destination="WCx-Gt-y6Z" id="2a9-8g-vr5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0G9-Ea-PWW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1055.2" y="-537.48125937031489"/>
         </scene>
-        <!--View Controller-->
+        <!--Change City View Controller-->
         <scene sceneID="UMG-xs-aEu">
             <objects>
-                <viewController id="9A4-Ff-ggV" sceneMemberID="viewController">
+                <viewController id="9A4-Ff-ggV" customClass="ChangeCityViewController" customModule="Weather_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UOr-8M-hSe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -105,6 +110,9 @@
                                 <rect key="frame" x="10" y="72" width="32" height="32"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <state key="normal" image="left"/>
+                                <connections>
+                                    <action selector="backButton:" destination="9A4-Ff-ggV" eventType="touchUpInside" id="y1h-Wf-Jxg"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Lec-bO-1IY">
                                 <rect key="frame" x="93" y="205" width="189" height="89"/>
