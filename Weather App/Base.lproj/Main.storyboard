@@ -129,6 +129,9 @@
                                         <state key="normal" title="Get Weather">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="getWeatherButton:" destination="9A4-Ff-ggV" eventType="touchUpInside" id="CWa-yb-0Gk"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -150,6 +153,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="h4g-tw-Rab"/>
                     </view>
+                    <connections>
+                        <outlet property="changeCityTextField" destination="mhi-YW-hKk" id="dIe-35-tNJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GmC-Ws-Adf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
