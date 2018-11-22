@@ -18,6 +18,7 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate {
         //the best location Accuracy for app depends on which is suitable
         locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
         locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
     }
     
     let weather_URL = "http://api.openweathermap.org/data/2.5/weather"
@@ -25,6 +26,31 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate {
     
     //create instance of location manager
     let locationManager = CLLocationManager()
+    
+    //notifies delegate(self) about updating location
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let location = locations[locations.count - 1]
+        if location.horizontalAccuracy > 0 {
+            locationManager.stopUpdatingLocation()
+            
+            print("longitude = \(location.coordinate.longitude), latitude = \(location.coordinate.latitude)")
+            
+            let latitude = String(location.coordinate.latitude)
+            let longitude = String(location.coordinate.longitude)
+            
+            let params : [String: String] = ["lat" : latitude, "lon" : longitude, "appid" : app_ID]
+            
+            
+            
+        }
+    }
+    
+    //handles error when updating location
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        NSLog("\(error)")
+        cityLabel.text = "Location Unavailable"
+    }
+    
     
     
     @IBOutlet weak var temperatureLabel: UILabel!
