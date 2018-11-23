@@ -8,6 +8,8 @@
 
 import UIKit
 import CoreLocation
+import Alamofire
+import SwiftyJSON
 
 class WeatherViewController: UIViewController, CLLocationManagerDelegate {
 
@@ -40,6 +42,8 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate {
             
             let params : [String: String] = ["lat" : latitude, "lon" : longitude, "appid" : app_ID]
             
+            getWeatherData(url: weather_URL, parameters: params)
+            
             
             
         }
@@ -51,6 +55,12 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate {
         cityLabel.text = "Location Unavailable"
     }
     
+    
+    //MARK: - Netwroking
+    
+    func getWeatherData(url: String, parameters: [String:String]){
+        
+    }
     
     
     @IBOutlet weak var temperatureLabel: UILabel!
