@@ -10,6 +10,9 @@ import UIKit
 
 class WeatherDataModel {
     
-    
+    var temperature: Int
+    var condition: Int
+    var city: String
+    var weatherIconName: String
     
 }
