@@ -14,5 +14,12 @@ class WeatherDataModel {
     var condition: Int
     var city: String
     var weatherIconName: String
+    init(temperature: Int, condition: Int, city: String, weatherIconName: String){
+        
+        self.temperature = temperature
+        self.condition = condition
+        self.city = city
+        self.weatherIconName = weatherIconName
+    }
     
 }

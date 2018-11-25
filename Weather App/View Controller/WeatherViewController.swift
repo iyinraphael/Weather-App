@@ -43,7 +43,7 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate {
             
             let params : [String: String] = ["lat" : latitude, "lon" : longitude, "appid" : app_ID]
             
-            getWeatherData(url: weather_URL, parameters: params)
+            weatherController.getWeatherData(url: weather_URL, parameters: params)
             
             
             
@@ -57,30 +57,8 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     
-    //MARK: - Netwroking
     
-    func getWeatherData(url: String, parameters: [String:String]){
-        
-        Alamofire.request(url, method: .get, parameters: parameters).responseJSON { response in
-            if response.result.isSuccess {
-                
-                let weatherJSON : JSON = JSON(response.result.value!)
-                self.updateWeatherData(json: weatherJSON)
-        
-            }
-            else {
-                NSLog("Error \(String(describing: response.result.error))")
-                self.cityLabel.text = "Connection Issues"
-            }
-        }
-        
-    }
-    
-    
-    func updateWeatherData(json : JSON) {
-        
-        let tempResult = json["main"]["temp"]
-    }
+    let weatherController = WeatherController()
     
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var weatherIcon: UIImageView!
